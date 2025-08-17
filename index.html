@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>International Student Job Application - [Your Name]</title>
+    <meta name="description" content="Application for an on-campus part-time job as an international student at [University Name].">
+    <meta name="keywords" content="international student, college job, part-time, university employment, [Your Name], [University Name]">
+    <meta name="author" content="[Your Name]">
+
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='40' fill='%23007bff'/><text x='50%' y='50%' dy='.3em' font-size='30' fill='white' text-anchor='middle'>J</text></svg>" type="image/svg+xml">
+
+    <style>
+        /* CSS Variables */
+        :root {
+            --primary-color: #007bff; /* Blue */
+            --secondary-color: #6c757d; /* Gray */
+            --accent-color: #28a745; /* Green */
+            --background-color: #f8f9fa;
+            --surface-color: #ffffff;
+            --text-color: #212529;
+            --heading-font: 'Montserrat', sans-serif;
+            --body-font: 'Open Sans', sans-serif;
+            --border-radius: 8px;
+            --transition-speed: 0.3s;
+        }
+
+        /* Font Imports */
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;600&display=swap');
+
+        /* Basic Reset and Box Sizing */
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Body Styles */
+        body {
+            font-family: var(--body-font);
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background-color);
+            scroll-behavior: smooth;
+        }
+
+        /* Container for responsiveness */
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--surface-color);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            padding: 1.5rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: var(--heading-font);
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            text-decoration: none;
+            transition: color var(--transition-speed) ease;
+        }
+
+        .logo:hover {
+            color: var(--accent-color);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-left: 25px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: var(--secondary-color);
+            font-weight: 600;
+            transition: color var(--transition-speed) ease;
+        }
+
+        nav ul li a:hover,
+        nav ul li a.active {
+            color: var(--primary-color);
+        }
+
+        /* Hamburger Menu for Mobile */
+        .hamburger {
+            display: none;
+            cursor: pointer;
+            font-size: 2rem;
+            color: var(--primary-color);
+        }
+
+        @media (max-width: 768px) {
+            .hamburger {
+                display: block;
+            }
+
+            nav ul {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background-color: var(--surface-color);
+                padding: 20px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            }
+
+            nav ul.active {
+                display: flex;
+            }
+
+            nav ul li {
+                margin: 10px 0;
+                text-align: center;
+            }
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(to right, rgba(0, 123, 255, 0.1), rgba(0, 123, 255, 0.05)), url('https://via.placeholder.com/1500x600/007bff/ffffff?text=Campus+Job+Opportunity') no-repeat center center/cover;
+            color: var(--text-color);
+            text-align: center;
+            padding: 80px 0;
+            position: relative;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(255, 255, 255, 0.5);
+            z-index: 0;
+        }
+
+        .hero .container {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero h1 {
+            font-family: var(--heading-font);
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero .btn {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: white;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: var(--border-radius);
+            font-weight: 600;
+            transition: background-color var(--transition-speed) ease, transform var(--transition-speed) ease;
+            font-size: 1.1rem;
+        }
+
+        .hero .btn:hover {
+            background-color: #218838;
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            .hero p {
+                font-size: 1rem;
+            }
+        }
+
+        /* Section Styles */
+        section {
+            padding: 60px 0;
+        }
+
+        section h2 {
+            font-family: var(--heading-font);
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            color: var(--primary-color);
+        }
+
+        /* About Me Section */
+        .about {
+            background-color: var(--surface-color);
+        }
+
+        .about .container {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .about-image {
+            flex: 1;
+            min-width: 300px;
+            text-align: center;
+        }
+
+        .about-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: var(--border-radius);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            transition: transform var(--transition-speed) ease;
+        }
+
+        .about-image img:hover {
+            transform: scale(1.03);
+        }
+
+        .about-content {
+            flex: 2;
+            min-width: 300px;
+        }
+
+        .about-content h3 {
+            font-family: var(--heading-font);
+            font-size: 1.8rem;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+
+        .about-content p {
+            margin-bottom: 15px;
+            color: var(--secondary-color);
+        }
+
+        /* Skills Section */
+        .skills {
+            background-color: var(--background-color);
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .skill-item {
+            background-color: var(--surface-color);
+            padding: 25px;
+            border-radius: var(--border-radius);
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+        }
+
+        .skill-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+        }
+
+        .skill-item i {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+
+        .skill-item h4 {
+            font-family: var(--heading-font);
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            color: var(--primary-color);
+        }
+
+        .skill-item p {
+            color: var(--secondary-color);
+        }
+
+        /* Experience Section */
+        .experience {
+            background-color: var(--surface-color);
+        }
+
+        .experience-item {
+            background-color: var(--background-color);
+            padding: 25px;
+            margin-bottom: 25px;
+            border-radius: var(--border-radius);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: box-shadow var(--transition-speed) ease;
+        }
+
+        .experience-item:hover {
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .experience-item h3 {
+            font-family: var(--heading-font);
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            margin-bottom: 5px;
+        }
+
+        .experience-item h4 {
+            font-style: italic;
+            color: var(--secondary-color);
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+
+        .experience-item p {
+            color: var(--text-color);
+            margin-bottom: 10px;
+        }
+
+        .experience-item ul {
+            list-style: disc;
+            padding-left: 25px;
+            color: var(--secondary-color);
+        }
+
+        .experience-item ul li {
+            margin-bottom: 8px;
+        }
+
+        /* Education Section */
+        .education {
+            background-color: var(--background-color);
+        }
+
+        .education-item {
+            background-color: var(--surface-color);
+            padding: 25px;
+            margin-bottom: 25px;
+            border-radius: var(--border-radius);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: box-shadow var(--transition-speed) ease;
+        }
+
+        .education-item:hover {
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .education-item h3 {
+            font-family: var(--heading-font);
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            margin-bottom: 5px;
+        }
+
+        .education-item h4 {
+            font-style: italic;
+            color: var(--secondary-color);
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+
+        .education-item p {
+            color: var(--text-color);
+        }
+
+        /* Contact Section */
+        .contact {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 60px 0;
+        }
+
+        .contact h2 {
+            color: white;
+            margin-bottom: 30px;
+        }
+
+        .contact p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+
+        .contact .btn {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: white;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: var(--border-radius);
+            font-weight: 600;
+            transition: background-color var(--transition-speed) ease, transform var(--transition-speed) ease;
+            font-size: 1.1rem;
+        }
+
+        .contact .btn:hover {
+            background-color: #218838;
+            transform: translateY(-2px);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--text-color);
+            color: var(--background-color);
+            text-align: center;
+            padding: 30px 0;
+            font-size: 0.9rem;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        footer a {
+            color: var(--primary-color);
+            text-decoration: none;
+            transition: color var(--transition-speed) ease;
+        }
+
+        footer a:hover {
+            color: var(--accent-color);
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 992px) {
+            .container {
+                padding: 0 15px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .about .container {
+                flex-direction: column;
+            }
+            .about-image {
+                margin-bottom: 30px;
+            }
+        }
+
+        /* Animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeIn 1s ease-out forwards;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Accessibility */
+        a:focus, button:focus, input:focus, textarea:focus {
+            outline: 3px solid var(--primary-color);
+            outline-offset: 2px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <a href="#hero" class="logo" aria-label="Go to homepage">Your Name</a>
+            <nav>
+                <ul>
+                    <li><a href="#about">About Me</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="hamburger" id="hamburger" aria-label="Toggle navigation menu" role="button" aria-expanded="false">
+                &#9776;
+            </div>
+        </div>
+    </header>
+
+    <section id="hero" class="hero">
+        <div class="container">
+            <h1>Hello! I'm [Your Name]</h1>
+            <p>An ambitious international student seeking a part-time opportunity on campus. Eager to contribute my skills and learn within the vibrant community of [University Name].</p>
+            <a href="#contact" class="btn">Get In Touch</a>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-image fade-in">
+                <img src="https://via.placeholder.com/400x400/007bff/ffffff?text=Profile+Pic" alt="A professional photo of [Your Name]">
+            </div>
+            <div class="about-content fade-in">
+                <h3>About Me</h3>
+                <p>As an international student from [Your Country], I bring a global perspective and a strong desire to immerse myself in the university's academic and professional life. I am currently pursuing a degree in [Your Major] and am highly motivated to gain practical experience that complements my studies.</p>
+                <p>I am a detail-oriented, organized, and enthusiastic individual with excellent communication skills. I thrive in collaborative environments and am always eager to take on new challenges and responsibilities.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2>My Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-item fade-in">
+                    <i class="fas fa-language"></i>
+                    <h4>Communication</h4>
+                    <p>Fluent in English and [Your Native Language]. Proficient in cross-cultural communication.</p>
+                </div>
+                <div class="skill-item fade-in">
+                    <i class="fas fa-users"></i>
+                    <h4>Teamwork</h4>
+                    <p>Proven ability to collaborate effectively with diverse groups of people.</p>
+                </div>
+                <div class="skill-item fade-in">
+                    <i class="fas fa-calendar-alt"></i>
+                    <h4>Time Management</h4>
+                    <p>Skilled in prioritizing tasks and managing workload efficiently to meet deadlines.</p>
+                </div>
+                <div class="skill-item fade-in">
+                    <i class="fas fa-lightbulb"></i>
+                    <h4>Problem-Solving</h4>
+                    <p>Analytical thinking to identify issues and develop practical solutions.</p>
+                </div>
+                <div class="skill-item fade-in">
+                    <i class="fas fa-computer"></i>
+                    <h4>Technical Proficiency</h4>
+                    <p>Competent with Microsoft Office Suite, Google Workspace, and basic CRM software.</p>
+                </div>
+                <div class="skill-item fade-in">
+                    <i class="fas fa-book-open"></i>
+                    <h4>Research</h4>
+                    <p>Ability to conduct thorough research and synthesize information.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="experience">
+        <div class="container">
+            <h2>Relevant Experience</h2>
+            <div class="experience-item fade-in">
+                <h3>Volunteer at [Local Community Event/Organization]</h3>
+                <h4>[City, Country] | [Month Year] - [Month Year]</h4>
+                <p>Assisted in organizing and executing community events, engaging with attendees and providing information.</p>
+                <ul>
+                    <li>Coordinated volunteer schedules and tasks.</li>
+                    <li>Provided assistance to participants, ensuring a positive experience.</li>
+                    <li>Managed event logistics and setup/teardown.</li>
+                </ul>
+            </div>
+            <div class="experience-item fade-in">
+                <h3>Student Ambassador, [Your Previous School/Organization]</h3>
+                <h4>[City, Country] | [Month Year] - [Month Year]</h4>
+                <p>Represented the institution, sharing insights and experiences with prospective students and parents.</p>
+                <ul>
+                    <li>Led campus tours and informational sessions.</li>
+                    <li>Answered questions about academic programs and student life.</li>
+                    <li>Assisted in onboarding new students.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="education" class="education">
+        <div class="container">
+            <h2>Education</h2>
+            <div class="education-item fade-in">
+                <h3>[Your Degree Name] (Expected Graduation: [Year])</h3>
+                <h4>[University Name], [City, Country]</h4>
+                <p>Major: [Your Major]</p>
+                <p>GPA: [Your GPA if good, otherwise omit]</p>
+                <p>Relevant Coursework: [List 2-3 relevant courses, e.g., Project Management, Business Communications, Data Analysis]</p>
+            </div>
+            <div class="education-item fade-in">
+                <h3>High School Diploma</h3>
+                <h4>[High School Name], [City, Country]</h4>
+                <p>Year of Graduation: [Year]</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Ready to Contribute</h2>
+            <p>I am excited about the possibility of joining your team and contributing to the [University Name] community. I am available for an interview at your earliest convenience.</p>
+            <a href="mailto:your.email@example.com?subject=On-Campus%20Job%20Application" class="btn">Email Me</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; <span id="current-year"></span> [Your Name]. All rights reserved.</p>
+            <p>Proudly representing [Your Country]</p>
+        </div>
+    </footer>
+
+    <!-- Font Awesome for Icons -->
+    <script src="https://kit.fontawesome.com/your-fontawesome-kit-id.js" crossorigin="anonymous"></script>
+    <!-- Replace 'your-fontawesome-kit-id.js' with your actual Font Awesome kit code -->
+    <!-- If you don't have a kit, you can use a CDN, but a kit is recommended for production -->
+    <!-- Example CDN (for testing, not recommended for production):
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js" crossorigin="anonymous"></script>
+    -->
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Update current year in footer
+            document.getElementById('current-year').textContent = new Date().getFullYear();
+
+            // Hamburger Menu Functionality
+            const hamburger = document.getElementById('hamburger');
+            const navUl = document.querySelector('nav ul');
+
+            hamburger.addEventListener('click', () => {
+                navUl.classList.toggle('active');
+                // Toggle ARIA attribute for accessibility
+                const isExpanded = navUl.classList.contains('active');
+                hamburger.setAttribute('aria-expanded', isExpanded);
+            });
+
+            // Smooth Scrolling for Nav Links
+            document.querySelectorAll('nav ul li a, .logo').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+
+                    if (targetElement) {
+                        // Close the mobile menu if it's open
+                        if (navUl.classList.contains('active')) {
+                            navUl.classList.remove('active');
+                            hamburger.setAttribute('aria-expanded', 'false');
+                        }
+
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+
+            // Highlight active nav link on scroll
+            const sections = document.querySelectorAll('section[id]');
+            window.addEventListener('scroll', () => {
+                const scrollY = window.pageYOffset;
+
+                sections.forEach(current => {
+                    const sectionHeight = current.offsetHeight;
+                    const sectionTop = current.offsetTop - 50; // Subtract header height offset
+                    const sectionId = current.getAttribute('id');
+
+                    const navLink = document.querySelector(`nav ul li a[href="#${sectionId}"]`);
+
+                    if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+                        navLink.classList.add('active');
+                    } else {
+                        navLink.classList.remove('active');
+                    }
+                });
+            });
+
+            // Fade-in animations on scroll
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('fade-in');
+                        observer.unobserve(entry.target); // Stop observing once faded in
+                    }
+                });
+            }, { threshold: 0.1 }); // Trigger when 10% of the element is visible
+
+            document.querySelectorAll('.fade-in').forEach(element => {
+                observer.observe(element);
+            });
+
+            // Add Font Awesome icons manually if not using a kit
+            // If you're using the CDN method commented out above, this is not needed.
+            // If you DO use a kit, ensure the script tag is correctly implemented above.
+            // Example of manually adding if you have FontAwesome CSS included, but JS isn't loading icons:
+            // This part is generally handled by Font Awesome's JS or CSS classes, but if you need to force it for some reason:
+            // Example for Font Awesome 6:
+            // const skillIcons = document.querySelectorAll('.skill-item i');
+            // skillIcons.forEach(icon => {
+            //     if (!icon.classList.contains('fas')) { // Check if it already has a FA class
+            //         // Assuming the class name is directly on the element like 'fa-language'
+            //         // This is more complex and usually handled by the <script> tag.
+            //     }
+            // });
+        });
+    </script>
+
+</body>
+</html>
